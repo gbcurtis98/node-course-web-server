@@ -27,7 +27,7 @@ hbs.registerHelper('getCurrentyear', () => {
 });
 hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
-})
+});
 // app.get('/', (req, res) => {
 //   // res.send('<h1>Hello Express</h1>');
 //   res.send({
@@ -46,12 +46,14 @@ app.get('/', (req, res) => {
 });
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page'
+    pageTitle: 'About Page',
+    welcomeMessage: 'I love development!'
   });
 });
 app.get('/projects', (req, res) => {
   res.render('projects.hbs', {
-    pageTitle: 'Projects Page'
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'Thanks for checking out my projects!'
   });
 });
 app.get('/bad', (req, res) => {
